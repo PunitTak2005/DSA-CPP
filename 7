@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+struct SparseMatrix {
+    int row, col, value;
+};
+
+void createSparseMatrix(int matrix[][3], int m, int n, SparseMatrix sparse[], int &nonZero) {
+    nonZero = 0;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (matrix[i][j] != 0) {
+                sparse[nonZero].row = i;
+                sparse[nonZero].col = j;
+                sparse[nonZero].value = matrix[i][j];
+                nonZero++;
+            }
+        }
+    }
+}
+
+void displaySparseMatrix(SparseMatrix sparse[], int nonZero) {
+    cout << "Row\tCol\tValue" << endl;
+    for (int i = 0; i < nonZero; i++) {
+        cout << sparse[i].row << "\t" << sparse[i].col << "\t" << sparse[i].value << endl;
+    }
+}
+
+int main() {
+    int matrix[3][3] = {{0, 5, 0}, {0, 0, 3}, {1, 0, 0}};
+    SparseMatrix sparse[9];
+    int nonZero;
+
+    createSparseMatrix(matrix, 3, 3, sparse, nonZero);
+    displaySparseMatrix(sparse, nonZero);
+
+    return 0;
+}
