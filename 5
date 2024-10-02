@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+void insert(int arr[], int &n, int pos, int val) {
+    for (int i = n; i > pos; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[pos] = val;
+    n++;
+}
+
+void deleteAt(int arr[], int &n, int pos) {
+    for (int i = pos; i < n - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+    n--;
+}
+
+void mergeArrays(int arr1[], int n1, int arr2[], int n2, int result[]) {
+    for (int i = 0; i < n1; i++) {
+        result[i] = arr1[i];
+    }
+    for (int i = 0; i < n2; i++) {
+        result[n1 + i] = arr2[i];
+    }
+}
+
+void display(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int arr[20] = {1, 2, 3, 4, 5}, n = 5;
+    int arr2[5] = {6, 7, 8, 9, 10};
+    int result[10];
+
+    cout << "Original Array: ";
+    display(arr, n);
+
+    insert(arr, n, 2, 10);
+    cout << "After Insertion: ";
+    display(arr, n);
+
+    deleteAt(arr, n, 4);
+    cout << "After Deletion: ";
+    display(arr, n);
+
+    mergeArrays(arr, n, arr2, 5, result);
+    cout << "After Merge: ";
+    display(result, n + 5);
+
+    return 0;
+}
