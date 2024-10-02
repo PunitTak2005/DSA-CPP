@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+void addMatrices(int A[3][3], int B[3][3], int C[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+}
+
+void subtractMatrices(int A[3][3], int B[3][3], int C[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            C[i][j] = A[i][j] - B[i][j];
+        }
+    }
+}
+
+void multiplyMatrices(int A[3][3], int B[3][3], int C[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            C[i][j] = 0;
+            for (int k = 0; k < 3; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+}
+
+void displayMatrix(int C[3][3]) {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << C[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int A[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int B[3][3] = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+    int C[3][3];
+
+    cout << "Addition of Matrices: " << endl;
+    addMatrices(A, B, C);
+    displayMatrix(C);
+
+    cout << "Subtraction of Matrices: " << endl;
+    subtractMatrices(A, B, C);
+    displayMatrix(C);
+
+    cout << "Multiplication of Matrices: " << endl;
+    multiplyMatrices(A, B, C);
+    displayMatrix(C);
+
+    return 0;
+}
