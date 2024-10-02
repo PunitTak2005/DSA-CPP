@@ -25,4 +25,9 @@ int main() {
 
     cout << "Linear Search Result: " << linearSearch(arr, n, key) << endl;
 
-    cout << "Binary Search Result: " << binarySearch
+    cout << "Binary Search Result: " << binarySearch(arr, 0, n - 1, key) << endl;
+
+    return 0;
+}
+
+
