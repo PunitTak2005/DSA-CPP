@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, reversed[10], i = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    while (num > 0) {
+        reversed[i] = num % 10;
+        num /= 10;
+        i++;
+    }
+
+    cout << "Reversed Number: ";
+    for (int j = 0; j < i; j++) {
+        cout << reversed[j];
+    }
+    cout << endl;
+    return 0;
+}
