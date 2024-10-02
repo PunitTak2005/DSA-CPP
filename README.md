@@ -82,6 +82,43 @@ Copy code
 - Update any specific paths or file names as needed.
 - Feel free to add more details or sections based on your specific implementation or additional files you may have.
 
+S.No	Program Name
+1	Reverse a Number (User Input)
+2	Reverse a Number using an Array
+3	Bubble Sort
+4	Selection Sort
+5	Insertion Sort
+6	Array Operations (Insertion, Deletion, Merge, and Display)
+7	Matrix Operations (Addition, Subtraction, Multiplication)
+8	Sparse Matrix Implementation
+9	Singly Linked List (Insert, Insert at Position, Delete, Display)
+10	Stack Implementation (Array)
+11	Stack Implementation (Linked List)
+12	Queue Implementation (Array)
+13	Queue Implementation (Linked List)
+14	Linear and Binary Search
+15	Doubly Linked List Implementation
+16	Polynomial Expression (Addition of Two Polynomials)
+
+
+| S.No | Program Name                                                     |
+|------|-------------------------------------------------------------------|
+| 1    | Reverse a Number (User Input)                                     |
+| 2    | Reverse a Number using an Array                                   |
+| 3    | Bubble Sort                                                       |
+| 4    | Selection Sort                                                    |
+| 5    | Insertion Sort                                                    |
+| 6    | Array Operations (Insertion, Deletion, Merge, and Display)        |
+| 7    | Matrix Operations (Addition, Subtraction, Multiplication)         |
+| 8    | Sparse Matrix Implementation                                      |
+| 9    | Singly Linked List (Insert, Insert at Position, Delete, Display)  |
+| 10   | Stack Implementation (Array)                                      |
+| 11   | Stack Implementation (Linked List)                                |
+| 12   | Queue Implementation (Array)                                      |
+| 13   | Queue Implementation (Linked List)                                |
+| 14   | Linear and Binary Search                                          |
+| 15   | Doubly Linked List Implementation                                 |
+| 16   | Polynomial Expression (Addition of Two Polynomials)               |
 
 
 
